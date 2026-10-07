@@ -1,0 +1,4 @@
+patient_id,doctor_id,date,diagnosis,status
+1,1,2026-10-01T10:00:00,Migraine,Recovered
+2,2,2026-10-02T11:30:00,Hypertension,Under Treatment
+3,3,2026-10-03T09:15:00,Fever,Recovered

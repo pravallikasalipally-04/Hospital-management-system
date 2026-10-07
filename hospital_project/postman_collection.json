@@ -1,0 +1,31 @@
+{
+  "info": {
+    "name": "Hospital RMS API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {"key": "base_url", "value": "http://127.0.0.1:5000"},
+    {"key": "token", "value": ""}
+  ],
+  "item": [
+    {"name":"Auth","item":[
+      {"name":"Login Admin","request":{"method":"POST","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\n  \"username\": \"admin\",\n  \"password\": \"admin123\"\n}"},"url":{"raw":"{{base_url}}/api/auth/login","host":["{{base_url}}"],"path":["api","auth","login"]}}}
+    ]},
+    {"name":"Patients","item":[
+      {"name":"Get Patients","request":{"method":"GET","header":[{"key":"Authorization","value":"Bearer {{token}}"}],"url":{"raw":"{{base_url}}/api/patients","host":["{{base_url}}"],"path":["api","patients"]}}},
+      {"name":"Create Patient","request":{"method":"POST","header":[{"key":"Authorization","value":"Bearer {{token}}"},{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\n  \"name\": \"Postman Patient\",\n  \"age\": 30,\n  \"gender\": \"Female\",\n  \"contact\": \"9999999998\"\n}"},"url":{"raw":"{{base_url}}/api/patients","host":["{{base_url}}"],"path":["api","patients"]}}},
+      {"name":"Patch Patient","request":{"method":"PATCH","header":[{"key":"Authorization","value":"Bearer {{token}}"},{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\n  \"contact\": \"8888888888\"\n}"},"url":{"raw":"{{base_url}}/api/patients/1","host":["{{base_url}}"],"path":["api","patients","1"]}}}
+    ]},
+    {"name":"Doctors","item":[
+      {"name":"Get Doctors","request":{"method":"GET","header":[{"key":"Authorization","value":"Bearer {{token}}"}],"url":{"raw":"{{base_url}}/api/doctors","host":["{{base_url}}"],"path":["api","doctors"]}}}
+    ]},
+    {"name":"Appointments","item":[
+      {"name":"Get Appointments","request":{"method":"GET","header":[{"key":"Authorization","value":"Bearer {{token}}"}],"url":{"raw":"{{base_url}}/api/appointments","host":["{{base_url}}"],"path":["api","appointments"]}}},
+      {"name":"Filter By Doctor","request":{"method":"GET","header":[{"key":"Authorization","value":"Bearer {{token}}"}],"url":{"raw":"{{base_url}}/api/appointments?doctor_id=1","host":["{{base_url}}"],"path":["api","appointments"],"query":[{"key":"doctor_id","value":"1"}]}}},
+      {"name":"Create Appointment","request":{"method":"POST","header":[{"key":"Authorization","value":"Bearer {{token}}"},{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\n  \"patient_id\": 1,\n  \"doctor_id\": 1,\n  \"date\": \"2026-10-10T10:30:00\",\n  \"diagnosis\": \"Migraine\",\n  \"status\": \"Under Treatment\"\n}"},"url":{"raw":"{{base_url}}/api/appointments","host":["{{base_url}}"],"path":["api","appointments"]}}}
+    ]},
+    {"name":"Analytics","item":[
+      {"name":"Get Analytics","request":{"method":"GET","header":[{"key":"Authorization","value":"Bearer {{token}}"}],"url":{"raw":"{{base_url}}/api/analytics","host":["{{base_url}}"],"path":["api","analytics"]}}}
+    ]}
+  ]
+}

@@ -1,0 +1,13 @@
+id,patient_id,patient,doctor_id,doctor,date,diagnosis,status
+1,1,Ananya Reddy,1,Dr. Rajesh Kumar,2026-09-23 15:12:14,Migraine,Recovered
+2,2,Rahul Varma,2,Dr. Priya Sharma,2026-09-28 15:12:14,Hypertension,Under Treatment
+3,3,Sneha Rao,3,Dr. Anil Rao,2026-09-25 15:12:14,Fever,Recovered
+4,4,Kiran Kumar,2,Dr. Priya Sharma,2026-10-02 15:12:14,Chest Pain,Critical
+5,5,Meena Devi,3,Dr. Anil Rao,2026-09-30 15:12:14,Diabetes,Under Treatment
+6,1,Ananya Reddy,3,Dr. Anil Rao,2026-09-15 15:12:14,Viral Fever,Recovered
+7,2,Rahul Varma,1,Dr. Rajesh Kumar,2026-09-10 15:12:14,Headache,Recovered
+8,3,Sneha Rao,2,Dr. Priya Sharma,2026-09-20 15:12:14,Hypertension,Under Treatment
+9,1,Ananya Reddy,1,Dr. Rajesh Kumar,2026-10-01 10:00:00,Migraine,Recovered
+10,2,Rahul Varma,2,Dr. Priya Sharma,2026-10-02 11:30:00,Hypertension,Under Treatment
+11,3,Sneha Rao,3,Dr. Anil Rao,2026-10-03 09:15:00,Fever,Recovered
+12,1,Ananya Reddy,1,Dr. Rajesh Kumar,2026-10-10 10:30:00,Migraine,Under Treatment
